@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/Perfil"
+        android:title="@string/Perfil" />
+    <item android:id="@+id/Empresas"
+        android:title="@string/Empresas" />
+    <item android:id="@+id/Historial"
+        android:title="@string/Historial" />
+</menu>
