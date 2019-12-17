@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">prototipoTienda</string>
+    <string name="lblcorreot">Correo Electronico</string>
 </resources>

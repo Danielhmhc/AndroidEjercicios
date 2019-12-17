@@ -6,13 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@strings/lblcorreot" />
+
+            <EditText
+                android:id="@+id/txtCorreoIngreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:belowOf="lblCorreo"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/lblContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@strings/lblcorreot"
+                android:belowOf="txtCorreoIngreso"/>
+
+            <EditText
+                android:id="@+id/txtContraseñaIngreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:belowOf="txtContraseña"
+                android:text="Name" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
