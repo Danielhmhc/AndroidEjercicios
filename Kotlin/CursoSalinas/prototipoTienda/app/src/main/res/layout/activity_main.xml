@@ -7,9 +7,15 @@
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cdIngreso"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -21,32 +27,65 @@
                 android:id="@+id/lblCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@strings/lblcorreot" />
+                android:text="@string/lblcorreot" />
 
-            <EditText
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txtCorreoIngreso"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:belowOf="lblCorreo"
-                android:text="Name" />
+                android:layout_below="@id/lblCorreo"
+                android:hint="@string/pistacorre">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/lblContraseña"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@strings/lblcorreot"
-                android:belowOf="txtCorreoIngreso"/>
+                android:layout_below="@id/txtCorreoIngreso"
+                android:text="@string/lblcontra" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txtContraseñaIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblContraseña">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIngresar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:belowOf="txtContraseña"
-                android:text="Name" />
+                android:layout_below="@id/txtContraseñaIngreso"
+                android:maxWidth="150dp"
+                android:minWidth="80dp"
+                android:text="@string/lblIngresar" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistrar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtContraseñaIngreso"
+                android:layout_alignParentRight="true"
+                android:maxWidth="150dp"
+                android:minWidth="80dp"
+                android:text="@string/lblRegistrar">
+
+            </com.google.android.material.button.MaterialButton>
+
 
         </RelativeLayout>
 
