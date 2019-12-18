@@ -1,5 +1,6 @@
 package com.danielhmhc.prototipotienda
 
+import Modelo.Producto
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -7,6 +8,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import presentador.ArticuloAdaptador
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,6 +37,27 @@ class TiendaFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        var users = mutableListOf<Producto>()
+        users.add(Producto("Computadora", "Una compu con buen procesador, RAM y Disco",R.drawable.compu, 13548.20F))
+        users.add(Producto("Celular", "Un cel super bonito y muy buen camara para selfies ",R.drawable.celular, 6048.20F))
+        users.add(Producto("Mesita Billar", "Una mesita de billar para que jueges con tus sobrinitos ",R.drawable.mesa_billar, 248.20F))
+
+        users.add(Producto("Computadora2", "Una compu con buen procesador pero poca RAM y Disco",R.drawable.compu2, 7634.20F))
+        users.add(Producto("Celular2", "Un cel super bonito ... y ya ",R.drawable.celular2, 300.20F))
+        users.add(Producto("Mesita Billar2", "Una mesa de billar para que juegues pero con tus compas ",R.drawable.mesa_billar2, 1208.20F))
+
+        //Obtenemos la instancia de nuestro RecyclerView
+        val userList = view!!.findViewById<RecyclerView>(R.id.recArticulos)
+        userList.setHasFixedSize(true)
+        userList.layoutManager= LinearLayoutManager(context)
+        //Creamos una instancia de el Adaptador pasandole como parametro el contexto de la actividad y la coleccion de datos.
+        val adapter = this.context?.let { ArticuloAdaptador(it, users) }
+        //Asignamos el adaptador a la propiedad adapter de el RecyclerView.
+        userList.adapter = adapter
     }
 
     override fun onCreateView(
