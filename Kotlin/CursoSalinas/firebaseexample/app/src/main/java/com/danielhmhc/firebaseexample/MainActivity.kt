@@ -99,4 +99,14 @@ class MainActivity : AppCompatActivity(), ValueEventListener, ChildEventListener
     fun eliminar(){
         db.child("-LxwuhiCWEEAFVLYEToj").child("precio").removeValue()
     }
+
+    /* Notas y conocimientos sobre el proyecto
+
+    Antes para trabajar con notificaciones push se podian hacer en tres grupos, ahorita solo se puede bajo un esquema.
+
+    Canales en las notificaciones: Te categoriza las notificaciones, y el  usuario puede decidir que not recibe y cuales no
+    
+
+
+     */
 }
