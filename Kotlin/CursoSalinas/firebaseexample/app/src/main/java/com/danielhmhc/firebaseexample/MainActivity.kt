@@ -105,6 +105,9 @@ class MainActivity : AppCompatActivity(), ValueEventListener, ChildEventListener
     Antes para trabajar con notificaciones push se podian hacer en tres grupos, ahorita solo se puede bajo un esquema.
 
     Canales en las notificaciones: Te categoriza las notificaciones, y el  usuario puede decidir que not recibe y cuales no
+
+    ++Clase miercoles: Se va a hacver una mini aplicacion que puedas acceder o registrarte usando un proveedor como face o gmail.
+
     
 
 

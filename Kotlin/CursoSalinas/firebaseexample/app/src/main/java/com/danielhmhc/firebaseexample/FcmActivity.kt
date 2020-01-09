@@ -40,9 +40,7 @@ class FcmActivity : AppCompatActivity() {
             else {
                 FirebaseMessaging.getInstance().unsubscribeFromTopic(tag)
             }
-
         }
     }
-
 
 }
